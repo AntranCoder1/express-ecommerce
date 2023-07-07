@@ -1,0 +1,10 @@
+import express from "express";
+const router = express.Router();
+import * as ctrl from "../controllers/productVariant.controller";
+router.get("/getListByProduct/:id", ctrl.getListByProduct);
+router.get("/getById/:id", ctrl.getById);
+router.delete("/delete/:id", ctrl.deleteById);
+router.post("/create", ctrl.create);
+router.post("/update", ctrl.update);
+router.post("/deleteMany", ctrl.deleteMany);
+export default router;

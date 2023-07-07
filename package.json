@@ -1,0 +1,59 @@
+{
+  "name": "h2-express-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/app.js",
+  "scripts": {
+    "watch": "babel src/app.js --watch --out-file dist/app-compiled.js",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/h2-tech/h2-express-api.git"
+  },
+  "author": "Huynh Truong Chi Quan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/h2-tech/h2-express-api/issues"
+  },
+  "homepage": "https://gitlab.com/h2-tech/h2-express-api#readme",
+  "dependencies": {
+    "@types/jsonwebtoken": "^8.5.5",
+    "argon2": "^0.28.2",
+    "axios": "^0.24.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "express-session": "^1.17.3",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "multer": "^1.4.3",
+    "nodemailer": "^6.6.0",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "nodemon": "^2.0.14",
+    "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
+    "ts-mailgun": "^0.5.1",
+    "typescript": "^4.4.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^16.11.6",
+    "@types/nodemailer": "^6.4.4",
+    "@types/nodemailer-express-handlebars": "^4.0.2",
+    "ts-node": "^10.4.0",
+    "tslint": "^6.1.3"
+  }
+}

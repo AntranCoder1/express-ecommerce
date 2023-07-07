@@ -1,0 +1,239 @@
+<div
+  style="
+    font-family: 'Arial', Helvetica Neue, Helvetica, sans-serif;
+    line-height: 14pt;
+    padding: 20px 0px;
+    font-size: 14px;
+    max-width: 580px;
+    margin: 0 auto;
+  "
+>
+  <div class="adM"></div>
+  <div style="padding: 0 10px; margin-bottom: 25px">
+    <div class="adM"></div>
+    <p>Xin chào ${name_customer}</p>
+    <p>
+      Cảm ơn Anh/chị đã <span class="il">đặt</span>
+      <span class="il">hàng</span> tại <strong> ${domain_name}</strong>!
+    </p>
+    <p>
+      Đơn <span class="il">hàng</span> của Anh/chị đã được tiếp nhận, chúng tôi
+      sẽ nhanh chóng liên hệ với Anh/chị.
+    </p>
+  </div>
+  <hr />
+  <div style="padding: 0 10px">
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
+      <thead>
+        <tr>
+          <th
+            style="
+              text-align: left;
+              width: 50%;
+              font-size: medium;
+              padding: 5px 0;
+            "
+          >
+            <strong>Thông tin khách <span class="il">hàng</span></strong>
+          </th>
+          <th
+            style="
+              text-align: left;
+              width: 50%;
+              font-size: medium;
+              padding: 5px 0;
+            "
+          >
+            <strong>Địa chỉ nhận <span class="il">hàng</span></strong>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding-right: 15px">
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td>${customer_name}</td>
+                </tr>
+
+                <tr>
+                  <td>${customer_phone}</td>
+                </tr>
+
+                <tr>
+                  <td style="word-break: break-word; word-wrap: break-word">
+                    <a href="mailto:${customer_email}" target="_blank"
+                      >${customer_email2}</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td>${receiver_name}</td>
+                </tr>
+
+                <tr>
+                  <td>${receiver_phone}</td>
+                </tr>
+
+                <tr>
+                  <td style="word-break: break-word; word-wrap: break-word">
+                    ${receiver_address}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
+      <thead>
+        <tr>
+          <th
+            style="
+              text-align: left;
+              width: 50%;
+              font-size: medium;
+              padding: 5px 0;
+            "
+          >
+            Hình thức thanh toán:
+          </th>
+          <th
+            style="
+              text-align: left;
+              width: 50%;
+              font-size: medium;
+              padding: 5px 0;
+            "
+          >
+            Hình thức vận chuyển:
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding-right: 15px">
+            Thanh toán khi giao <span class="il">hàng</span> (COD)
+          </td>
+          <td>Giao <span class="il">hàng</span> tận nơi<br /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top: 20px; padding: 0 10px">
+    <div style="padding-top: 10px; font-size: medium">
+      <strong>Thông tin đơn <span class="il">hàng</span></strong>
+    </div>
+    <table style="width: 100%; margin: 10px 0">
+      <tbody>
+        <tr>
+          <td style="width: 50%; padding-right: 15px">
+            Mã đơn <span class="il">hàng</span>: ${order_id}
+          </td>
+          <td style="width: 50%">
+            Ngày <span class="il">đặt</span> <span class="il">hàng</span>:
+            ${order_date}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <ul style="padding-left: 0; list-style-type: none; margin-bottom: 0">
+      ${{detail}}
+    </ul>
+    <table
+      style="
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 50px;
+        margin-top: 10px;
+      "
+    >
+      <tbody>
+        <tr>
+          <td style="width: 20%"></td>
+          <td style="width: 80%">
+            <table style="width: 100%; float: right">
+              <tbody>
+                <tr>
+                  <td style="padding-bottom: 10px">Tổng tiền hàng:</td>
+                  <td
+                    style="
+                      font-weight: bold;
+                      text-align: right;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    ${total_order} VND
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 10px">Cước phí vận chuyển:</td>
+                  <td
+                    style="
+                      font-weight: bold;
+                      text-align: right;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    ${shipping_cost} VND
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding-bottom: 10px">Số tiền khuyến mãi:</td>
+                  <td
+                    style="
+                      font-weight: bold;
+                      text-align: right;
+                      padding-bottom: 10px;
+                    "
+                  >
+                    ${discount_cost} VND
+                  </td>
+                </tr>
+                <tr style="border-top: 1px solid #e5e9ec">
+                  <td style="padding-top: 10px">Thành tiền</td>
+                  <td
+                    style="
+                      font-weight: bold;
+                      text-align: right;
+                      font-size: 16px;
+                      padding-top: 10px;
+                    "
+                  >
+                    ${total_payment} VND
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="clear: both"></div>
+
+  <div style="clear: both"></div>
+  <div style="padding: 0 10px">
+    <div style="clear: both"></div>
+    <p style="margin: 30px 0">
+      Cám ơn Anh/chị đã đặt hàng tại
+      <a href="mailto:${website_url}" style="color: #357ebd" target="_blank"
+        >${website_url2}</a
+      >
+    </p>
+    <p style="text-align: right"><i>Trân trọng,</i></p>
+    <p style="text-align: right">
+      <strong
+        >Ban quản trị cửa <span class="il">hàng</span> ${shop_name}</strong
+      >
+    </p>
+  </div>
+</div>

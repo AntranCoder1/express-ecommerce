@@ -1,0 +1,12 @@
+import express from "express";
+const router = express.Router();
+import * as ctrl from "../controllers/domainSubCategory.controller";
+router.get("/getListByCategory/:id", ctrl.getListByCategory);
+router.get("/getById/:id", ctrl.getById);
+router.post("/getRecommendSlug", ctrl.getRecommendSlug);
+router.post("/getBySlug", ctrl.getBySlug);
+router.post("/create", ctrl.create);
+router.post("/update", ctrl.updateByBody);
+router.delete("/deleteById/:id", ctrl.deleteById);
+router.post("/deleteByBody", ctrl.deleteByBody);
+export default router;
